@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Japan style</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		p{
+			color:navy;
+			margin: 5px;
+			cursor: pointer;
+	}
+		p:hover{
+			background: pink;
+	}
+	.japan{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		background: rgba(63,191,191,0.5);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.remove{
+		position: fixed;
+		top: 10px;
+		right: 30px;
+		width: 10%;
+		height: 10%;
+		z-index: 10;
+		background: rgba(0,0,0,0);
+		display: flex;
+		justify-content: right;
+		align-items: right;
+	}
+	</style>
+</head>
+<body>
+	<p>日本</p>
+	<h1>好想去日本拍照～</h1>
+	<h5>但是疫情還沒結束(´;ω;`)</h5>
+	<div class="japan">
+		<img src="https://cdn04.dcfever.com/media/blog/files/509/509872/2017/01/509872_14836690292169.jpg">
+	</div>
+	<div class="remove">
+		<img src="remove.png" width="70" height="60">
+	</div>
+
+	<script type="text/javascript">
+		$("p").click(function(){
+			$(".japan").slideToggle();
+			$(".remove").slideToggle();
+		});
+		$(".remove").click(function(){
+			$(".remove").slideToggle();
+			$(".japan").slideToggle();
+		});
+	</script>
+</body>
+</html>
